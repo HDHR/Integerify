@@ -30,7 +30,6 @@ function setOutput(value) {
   cleanOutput.value = value;
   const count = value.replace(/^-/, '').length;
   lenBadge.textContent = count + (count === 1 ? ' digit' : ' digits');
-  statusText.textContent = value ? 'Live' : 'Ready';
 }
 
 function showToast(msg) {

@@ -175,6 +175,32 @@ input::placeholder { color: color-mix(in srgb, var(--text-muted) 70%, transparen
   display: flex; align-items: center; gap: 8px;
 }
 
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--bg-elev) 60%, transparent), transparent);
+  color: var(--text);
+  transition: transform var(--dur) var(--ease), background var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+
+.github-link:hover {
+  background: color-mix(in srgb, var(--bg-elev) 85%, transparent);
+}
+
+.github-link:active {
+  transform: translateY(1px) scale(.98);
+}
+
+.github-icon {
+  width: 22px;
+  height: 22px;
+}
+
 .chip {
   display: inline-flex; align-items: center; gap: 8px;
   border-radius: 999px; padding: 6px 10px;
