@@ -2,7 +2,7 @@
   try {
     const saved = localStorage.getItem('cleanint-theme');
     const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = saved || (prefersDark ? 'dark' : 'dark');
+    const theme = saved || (prefersDark ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', theme);
   } catch (_) {}
 })();
@@ -14,7 +14,6 @@ const lenBadge = $('#lenBadge');
 const copyBtn = $('#copyBtn');
 const clearBtn = $('#clearBtn');
 const toast = $('#toast');
-const statusText = $('#statusText');
 
 function sanitizeInteger(str) {
   if (typeof str !== 'string') str = String(str ?? '');
